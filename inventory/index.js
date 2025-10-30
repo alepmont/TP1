@@ -38,5 +38,10 @@ app.post('/setStock', async (req, res) => {
   }
 });
 
-const port = process.env.PORT || 3001;
-app.listen(port, () => console.log(`Inventory service listening on ${port}`));
+// Export app for testing; if run directly, listen on port
+if(require.main === module){
+  const port = process.env.PORT || 3001;
+  app.listen(port, () => console.log(`Inventory service listening on ${port}`));
+}
+
+module.exports = app;
