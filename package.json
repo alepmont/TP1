@@ -7,7 +7,8 @@
     "start": "concurrently \"node inventory/index.js\" \"node orders/index.js\" \"node gateway/index.js\"",
     "start:inventory": "node inventory/index.js",
     "start:orders": "node orders/index.js",
-    "start:gateway": "node gateway/index.js"
+    "start:gateway": "node gateway/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
