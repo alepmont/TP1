@@ -1,0 +1,21 @@
+{
+  "name": "microservices-example-tp1",
+  "version": "1.0.0",
+  "description": "Ejemplo didáctico de microservicios: orders, inventory, gateway. Demuestra DTO/DAO/BO, circuit breaker y saga simple.",
+  "main": "gateway/index.js",
+  "scripts": {
+    "start": "concurrently \"node inventory/index.js\" \"node orders/index.js\" \"node gateway/index.js\"",
+    "start:inventory": "node inventory/index.js",
+    "start:orders": "node orders/index.js",
+    "start:gateway": "node gateway/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "concurrently": "^7.6.0",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
